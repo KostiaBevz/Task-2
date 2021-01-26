@@ -30,7 +30,7 @@ df['Event Date'] = df['Event Date'].apply(lambda x: datetime.strptime(x, '%Y-%m-
 
 # %%
 # Let's group data by unique customer id and count how many times it does conversion action
-grouped = df.groupby(by='Subscriber ID', as_index=False)['Event Date'].count()-1
+grouped = df.groupby(by='Subscriber ID', as_index=False)['Event Date'].count()-1 # because first purchase is free trial
 grouped.rename(columns={'Event Date': 'Purchase'}, inplace=True)
 
 # %%
