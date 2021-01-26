@@ -34,15 +34,12 @@ grouped = df.groupby(by='Subscriber ID', as_index=False)['Event Date'].count()-1
 grouped.rename(columns={'Event Date': 'Purchase'}, inplace=True)
 
 # %%
-grouped
-
-# %%
 # Using formula to calculate LTV
 first = dev_proc*price
 grouped['LTV'] = grouped['Purchase']*first
 
 # %%
-grouped
+print(grouped)
 
 # %%
 # Let's get average value
