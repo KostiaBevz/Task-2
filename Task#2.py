@@ -46,7 +46,7 @@ print(grouped)
 LTV_for_6_weeks = grouped['LTV'].mean()
 
 # %%
-LTV_for_6_weeks
+print(LTV_for_6_weeks)
 
 # %% [markdown]
 # <b> It means that in period of 6 weeks marketing team need to spend not more than 9.34 to attract new  unique
